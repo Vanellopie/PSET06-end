@@ -1,3 +1,2 @@
-streamlit
-google-genai
-brave
+streamlit==1.44.1
+google-genai==1.12.1
