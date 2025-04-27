@@ -2,10 +2,10 @@ import streamlit as st
 from google import genai
 from google.genai import types
 # from brave import Brave
-from brave_search_python_client import BraveSearch
+# from brave_search_python_client import BraveSearch
 
 api_key = "AIzaSyC43kbqD_c3wYz3VVgSUwg0U4Hz8Bx5GjE"
-brave_search = BraveSearch(api_key="BSAP1ZmJl9wMXKDvGnGM78r9__i_VuG")
+# brave_search = BraveSearch(api_key="BSAP1ZmJl9wMXKDvGnGM78r9__i_VuG")
 # brave_api_key = "BSAP1ZmJl9wMXKDvGnGM78r9__i_VuG"
 
 SYSTEM_PROMPT = """You are a helpful, professional, and knowledgeable chatbot for the American University of Mongolia (AUM).
@@ -203,11 +203,11 @@ Deadlines:
 
 """
 
-def query_brave(query: str) -> str:
-    brave = Brave(api_key=brave_api_key)
-    num_results = 5
-    search_results = brave.search(q=query, count=num_results, raw=True)
-    return search_results['web']
+# def query_brave(query: str) -> str:
+#     brave = Brave(api_key=brave_api_key)
+#     num_results = 5
+#     search_results = brave.search(q=query, count=num_results, raw=True)
+#     return search_results['web']
 
 def initialize_gemini_client(api_key: str) -> genai.Client:
     return genai.Client(api_key=api_key)
